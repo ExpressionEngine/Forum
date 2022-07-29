@@ -109,7 +109,11 @@ class Forum
             $this->current_request == ee()->config->item('profile_trigger')) {
             $this->display_forum(ee()->config->item('profile_trigger'));
         } else {
-            require_once PATH_ADDONS . 'forum/mod.forum_core.php';
+            if (file_exists(PATH_THIRD . 'forum/mod.forum_core.php')) {
+                require_once PATH_THIRD . 'forum/mod.forum_core.php';
+            } else {
+                require_once PATH_ADDONS . 'forum/mod.forum_core.php';
+            }
 
             $this->forum_core = new Forum_Core();
 
