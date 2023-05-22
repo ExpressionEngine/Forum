@@ -87,9 +87,10 @@ class Forums extends AbstractDesignController
 
                 foreach ($files as $file) {
                     if (strpos($file, '.') !== false) {
-                        $human = str_replace('_', ' ', substr($file, 0, -strlen(strrchr($file, '.'))));
-                        $edit_url = ee('CP/URL')->make('addons/settings/forum/templates/edit/', ['theme' => $theme, 'dir' => $dir, 'file' => $human]);
-                        $human = ucfirst($human);
+                        //$human = str_replace('_', ' ', substr($file, 0, -strlen(strrchr($file, '.'))));
+                        $edit = substr($file, 0, -strlen(strrchr($file, '.')));
+                        $edit_url = ee('CP/URL')->make('addons/settings/forum/templates/edit/', ['theme' => $theme, 'dir' => $dir, 'file' => $edit]);
+                        $human = ucfirst(str_replace('_', ' ', $edit));
                         $data[$dir][] = array(
                             array(
                                 'content' => (lang($human) == false) ? $human : lang($human),
