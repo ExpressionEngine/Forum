@@ -5,7 +5,7 @@ return array(
     'author_url' => 'https://expressionengine.com/',
     'name' => 'Forum',
     'description' => 'Add a full-featured forum to your site',
-    'version' => '5.1.0',
+    'version' => '5.1.1',
     'namespace' => 'ExpressionEngine\Addons\Forum',
     'settings_exist' => true,
 

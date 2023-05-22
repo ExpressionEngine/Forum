@@ -22,3 +22,13 @@ The ExpressionEngine Discussion Forum Module allows you to create and manage a f
 - [Displaying Recent Forum Topics in non-forum templates](docs/recent-topics.md)
 - [Associating Channel Entries with Forum Topics](docs/channel-forum.md)
 - [Other Features](docs/other-features.md)
+
+## Changelog
+
+### 5.1.1
+
+- Fixed template links in the control panel.
+
+### 5.0.0
+
+- Moved Forum add-on out of core.
