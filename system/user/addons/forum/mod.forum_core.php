@@ -1139,7 +1139,8 @@ class Forum_Core extends Forum
 
         // Set the output type
         ee()->output->out_type = 'feed';
-        ee()->config->core_ini['send_headers'] = 'y';
+        ee()->config->set_item('send_headers', 'y');
+
         ee()->TMPL->template_type = 'feed';
 
         // Load the requested theme file

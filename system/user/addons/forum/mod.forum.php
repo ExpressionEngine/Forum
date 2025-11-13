@@ -46,6 +46,8 @@ class Forum
     public $is_table_open = false;
     public $preview_override = false;
     public $mbr_class_loaded = false;
+    public $MBR = null;
+    public $parse_php = false;
     public $read_topics_exist = false;
     public $SPELL = false;
     public $spellcheck_enabled = false;
