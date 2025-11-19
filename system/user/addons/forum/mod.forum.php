@@ -13,8 +13,8 @@
  */
 class Forum
 {
-    public $version = '5.1.1';
-    public $build = '20230522';
+    public $version = '5.1.2';
+    public $build = '20251119';
     public $use_site_profile = false;
     public $search_limit = 250; // Maximum number of search results (x2 since it can include this number of topics + this number of posts)
     public $return_data = '';
@@ -46,6 +46,8 @@ class Forum
     public $is_table_open = false;
     public $preview_override = false;
     public $mbr_class_loaded = false;
+    public $MBR = null;
+    public $parse_php = false;
     public $read_topics_exist = false;
     public $SPELL = false;
     public $spellcheck_enabled = false;

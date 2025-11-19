@@ -25,6 +25,11 @@ The ExpressionEngine Discussion Forum Module allows you to create and manage a f
 
 ## Changelog
 
+### 5.1.2
+
+- Fixed PHP deprecation issues.
+- Fixed a deprecated API call.
+
 ### 5.1.1
 
 - Fixed template links in the control panel.
