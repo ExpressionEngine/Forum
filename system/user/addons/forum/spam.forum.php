@@ -20,8 +20,13 @@ class Forum_spam implements SpamModerationInterface
      */
     public function __construct()
     {
-        require_once PATH_ADDONS . 'forum/mod.forum.php';
-        require_once PATH_ADDONS . 'forum/mod.forum_core.php';
+        foreach(['forum/mod.forum.php', 'forum/mod.forum_core.php'] as $file) {
+            if (file_exists(PATH_THIRD . $file)) {
+                require_once PATH_THIRD . $file;
+            } else {
+                require_once PATH_ADDONS . $file;
+            }
+        }
 
         $this->fc = new \Forum_Core();
     }
