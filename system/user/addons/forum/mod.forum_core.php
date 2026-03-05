@@ -6180,7 +6180,8 @@ class Forum_Core extends Forum
         }
 
         if (false !== (strpos($new_topic_id, "/"))) {
-            $new_topic_id = end(explode("/", $new_topic_id));
+            $new_topic_id_parts = explode("/", $new_topic_id);
+            $new_topic_id = end($new_topic_id_parts);
         }
 
         if (! is_numeric($new_topic_id)) {
@@ -6491,7 +6492,8 @@ class Forum_Core extends Forum
         }
 
         if (false !== (strpos($merge_id, "/"))) {
-            $merge_id = end(explode("/", $merge_id));
+            $merge_id_parts = explode("/", $merge_id);
+            $merge_id = end($merge_id_parts);
         }
 
         if (! is_numeric($merge_id)) {
@@ -9523,7 +9525,7 @@ class Forum_Core extends Forum
         }
 
         // make sure Super Admins are always allowed
-        if (! in_array($allowed_groups, 1)) {
+        if (! in_array(1, $allowed_groups)) {
             $allowed_groups[] = 1;
         }
 
