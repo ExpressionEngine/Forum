@@ -273,12 +273,12 @@ class Forum
 
             // Parse Snippets
             foreach (ee()->config->_global_vars as $key => $val) {
-                $this->return_data = str_replace(LD . $key . RD, $val, $this->return_data);
+                $this->return_data = str_replace(LD . $key . RD, ($val === null) ? '' : $val, $this->return_data);
             }
 
             // Parse Global Variables
             foreach (ee()->TMPL->global_vars as $key => $val) {
-                $this->return_data = str_replace(LD . $key . RD, $val, $this->return_data);
+                $this->return_data = str_replace(LD . $key . RD, ($val === null) ? '' : $val, $this->return_data);
             }
 
             $this->return_data = $this->_final_prep($this->return_data);
@@ -940,7 +940,7 @@ class Forum
         }
 
         foreach ($data as $key => $val) {
-            $str = str_replace('{' . $key . '}', $val, $str);
+            $str = str_replace('{' . $key . '}', ($val === null) ? '' : $val, $str);
         }
 
         return $str;

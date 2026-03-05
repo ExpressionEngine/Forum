@@ -106,12 +106,12 @@ class Forum_Core extends Forum
 
                 // Parse Snippets
                 foreach (ee()->config->_global_vars as $key => $val) {
-                    $this->return_data = str_replace(LD . $key . RD, $val, $this->return_data);
+                    $this->return_data = str_replace(LD . $key . RD, ($val === null) ? '' : $val, $this->return_data);
                 }
 
                 // Parse Global Variables
                 foreach (ee()->TMPL->global_vars as $key => $val) {
-                    $this->return_data = str_replace(LD . $key . RD, $val, $this->return_data);
+                    $this->return_data = str_replace(LD . $key . RD, ($val === null) ? '' : $val, $this->return_data);
                 }
 
                 $this->return_data = $this->_final_prep($this->return_data);
