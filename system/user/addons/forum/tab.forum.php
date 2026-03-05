@@ -317,8 +317,13 @@ class Forum_tab
 
                 // Update the forum stats
                 if (! class_exists('Forum')) {
-                    require PATH_ADDONS . 'forum/mod.forum.php';
-                    require PATH_ADDONS . 'forum/mod.forum_core.php';
+                    foreach(['forum/mod.forum.php', 'forum/mod.forum_core.php'] as $file) {
+                        if (file_exists(PATH_THIRD . $file)) {
+                            require_once PATH_THIRD . $file;
+                        } else {
+                            require_once PATH_ADDONS . $file;
+                        }
+                    }
                 }
 
                 $forum_core = new Forum_Core();
