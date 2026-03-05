@@ -43,6 +43,7 @@ class Forum
     public $cur_thread_row = 0;
     public $thread_post_total = 0;	// Used for new entry submission to determine redirect page number
     public $trigger_error_page = false;
+    public $trigger_login_page = false;
     public $is_table_open = false;
     public $preview_override = false;
     public $mbr_class_loaded = false;
@@ -53,6 +54,7 @@ class Forum
     public $spellcheck_enabled = false;
     public $feeds_enabled = null;
     public $feed_ids = '';
+    public $date_limit = '';
     public $realm = "ExpressionEngine Forums";
     public $auth_attempt = false;
     public $use_sess_id = 0;	// Used in calls to ee()->functions->fetch_site_index() in certain URLs, like attachments
