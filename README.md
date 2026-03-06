@@ -25,6 +25,12 @@ The ExpressionEngine Discussion Forum Module allows you to create and manage a f
 
 ## Changelog
 
+### 5.1.3
+
+- Fixed PHP deprecation issues.
+- Fixed bug where Superadmin were not given full permissions in rare cases.
+- Fixed Invalid reference to PATH_ADDONS ([#5](https://github.com/ExpressionEngine/Forum/issues/5))
+
 ### 5.1.2
 
 - Fixed PHP deprecation issues.
